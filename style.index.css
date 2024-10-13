@@ -1,0 +1,64 @@
+.container{
+    display: flex;
+}
+
+.aba_lateral{
+    width: 200px;
+    height: 800px;
+    background-color: #4A4A4A;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+input[type="submit"]{
+    background-color: #61D16C;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 160px;
+    height: 40px;
+    color: white;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+}
+
+li{
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    justify-content: center;
+    width: 160px;
+    height: 20px;
+    color: white;
+}
+
+.tela{
+    flex-grow: 1; 
+    background-color: #2E2E2E; 
+}
+
+.tela p{
+    color: white;
+}
+
+.logo{
+    font-family: 'Inter', sans-serif;
+    color: white;  
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.texto1{
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    margin-left: 20px;
+}
