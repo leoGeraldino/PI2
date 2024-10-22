@@ -1,5 +1,6 @@
 .container{
     display: flex;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .aba_lateral{
@@ -26,7 +27,7 @@ input[type="submit"]{
 
 ul{
     list-style-type: none;
-    display: flex;
+    /* display: flex; */
 }
 
 li{
@@ -42,10 +43,26 @@ li{
 .tela{
     flex-grow: 1; 
     background-color: #2E2E2E; 
+    color: #ffffff;
 }
 
 .tela p{
     color: white;
+}
+
+.form {
+    display: grid;
+    align-items: center;
+    padding: 1rem;
+}
+.linha {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 3rem;
+}
+
+.linha div {
+    display: grid;
 }
 
 .logo{
@@ -61,4 +78,16 @@ li{
     font-family: 'Mulish', sans-serif;
     font-size: 16px;
     margin-left: 20px;
+}
+
+#titulo {
+    padding-bottom: 2rem;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    box-shadow: none;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    outline: none;
 }

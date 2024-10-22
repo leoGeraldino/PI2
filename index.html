@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/CSS" href="style.index.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+        <script src="./src/js/alerta.js"></script>
         <title>Index | eadPlan</title>
     </head>
     <body>
@@ -12,16 +13,37 @@
             <section class="aba_lateral">
                 <h1 class="logo">eadPlan</h1>
                 <form action="#">
-                    <input type="submit" value="+ Adicionar alerta">
+                    <input type="submit" value="+ Adicionar alerta" id="btadd">
                 </form>
-                <ul>
+                <ul id="lista">
                     <li>
                         <p>Alerta criado</p>
                     </li>
                 </ul>
             </section>
             <section class="tela">
-                <p class="texto1">Em construção</p>
+                <!-- <p class="texto1">Em construção</p> -->
+
+                
+                <div class="form">
+                    <input type="text" name="titulo" id="titulo" placeholder="Titulo">
+                    <div class="linha">
+                        <div>
+                            <label for="email">E-mail</label>
+                                <input type="email" name="email" id="email">
+                        </div>
+                        <div>
+                            <label for="data-inicio">Data de início</label>
+                                <input type="datetime-local" name="data-inicio" id="data-inicio">
+                        </div>
+                        <div>
+                            <label for="data-fim">Data de fim</label>
+                                <input type="datetime-local" name="data-fim" id="data-fim">
+                        </div>
+                    </div>
+                    <label for="descricao">Descrição</label>
+                        <textarea name="" id="descricao"></textarea>
+                </div>
             </section>
         </div>
     </body>
