@@ -1,3 +1,6 @@
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
 document.addEventListener("DOMContentLoaded", function () {
     var btadd = document.getElementById("btadd");
     
@@ -14,16 +17,28 @@ document.addEventListener("DOMContentLoaded", function () {
         .appendChild(document.createElement("p")).textContent =
         "Alerta criado " + lista.childElementCount;
 
-        let documento = {
+        const raw = JSON.stringify({
           "id": lista.childElementCount,
           "titulo": titulo,
           "email": email,
           "dinicio": dinicio,
           "dfim": dfim,
           "descricao": descricao,
+        });
+        
+        const requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow"
         };
         
-        console.log(documento);
+        fetch("http://138.197.90.76:3000/send-event", requestOptions)
+          .then((response) => response.text())
+          .then((result) => console.log(result))
+          .catch((error) => console.error(error));
+
+        console.log(raw);
   });
 
 });
