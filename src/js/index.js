@@ -17,7 +17,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://138.197.90.76:3000/send-event", requestOptions)
+fetch("https://api2.marconsys.com/send-event", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
