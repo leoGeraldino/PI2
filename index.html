@@ -1,76 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="../src/img/univesp.svg" type="image/png">
+  <script src="./src/js/auth.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./src/js/login.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./src/js/login.js"></script>
-    <title>Login | eadPlan</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <!-- Font Awesome -->
-  </head>
-  <body>
-    <div class="container">
-      <div class="apresentacao">
-        <h1 class="titulo"><span>Ead</span>Plan</h1>
-        <p>Mantenha o Controle de Seus Dados Acadêmicos!</p>
-        <p>
-          Bem-vindo ao EadPlan , uma ferramenta ideal para você que quer
-          organizar seus compromissos acadêmicos de forma simples e eficiente!
-          Não perca mais prazos importantes, provas, entregas de trabalhos ou
-          reuniões com professores. Nosso calendário foi desenvolvido
-          especialmente para estudantes da área acadêmica, proporcionando um
-          planejamento completo e personalizável.
-        </p>
-        <p>
-          <strong>Alertas Inteligentes: </strong>Receba notificações automáticas
-          para não perder eventos importantes, como prazos de trabalhos ou
-          provas.
-        </p>
-        <p>
-          <strong>Calendário Personalizado: </strong>Organize seus dados e
-          eventos de acordo com suas necessidades, adicionando notas e lembretes
-          para cada compromisso
-        </p>
-        <p>
-          <strong>Integração Total: </strong>Sincronize com seus dispositivos,
-          garantindo que você tenha seus dados sempre à mão, seja no celular,
-          tablet ou computador.
-        </p>
-        <p>
-          <strong>Visualização Fácil e Intuitiva: </strong>Acesse seu calendário
-          em uma interface prática e moderna, com visualização semanal, mensal
-          ou diária.
-        </p>
-        <p>
-          Seja um aluno que busca otimizar seu tempo , o EadPlan é a solução
-          perfeita para se manter no controle de tudo! Não perca mais nada –
-          comece a organizar seu calendário acadêmico hoje mesmo!
-        </p>
-      </div>
-      <div class="login">
+  <title>ReMindMe</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./src/css/styles.css" />
+  <!-- Font Awesome -->
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <h1 class="titulo"><span>R</span>emindMe</h1>
+      <p>Mantenha o Controle de Seus Dados Acadêmicos!</p>
+      <p>
+        Bem-vindo ao EadPlan , uma ferramenta ideal para você que quer
+        organizar seus compromissos acadêmicos de forma simples e eficiente!
+        Não perca mais prazos importantes, provas, entregas de trabalhos ou
+        reuniões com professores. Nosso calendário foi desenvolvido
+        especialmente para estudantes da área acadêmica, proporcionando um
+        planejamento completo e personalizável.
+      </p>
+      <p>
+        <strong>Alertas Inteligentes: </strong>Receba notificações automáticas
+        para não perder eventos importantes, como prazos de trabalhos ou
+        provas.
+      </p>
+      <p>
+        <strong>Calendário Personalizado: </strong>Organize seus dados e
+        eventos de acordo com suas necessidades, adicionando notas e lembretes
+        para cada compromisso
+      </p>
+      <p>
+        <strong>Integração Total: </strong>Sincronize com seus dispositivos,
+        garantindo que você tenha seus dados sempre à mão, seja no celular,
+        tablet ou computador.
+      </p>
+      <p>
+        <strong>Visualização Fácil e Intuitiva: </strong>Acesse seu calendário
+        em uma interface prática e moderna, com visualização semanal, mensal
+        ou diária.
+      </p>
+      <p>
+        Seja um aluno que busca otimizar seu tempo , o EadPlan é a solução
+        perfeita para se manter no controle de tudo! Não perca mais nada –
+        comece a organizar seu calendário acadêmico hoje mesmo!
+      </p>
+    </div>
+    <div>
+      <form>
+        <div class="imageContainer">
+          <img src="/src/img/RemindMe.svg" alt="">
+        </div>
         <h1 class="mulish">Faça seu Login</h1>
-        <label for="email"
-          >Email
-          <input type="email" id="email" placeholder="seuemail@email" required autofocus/>
+        <label for="email">E-mail
+          <input type="email" id="email" placeholder="seuemail@email" />
         </label>
-        <label for="password"
-          >Senha
-          <input type="password" id="password" placeholder="sua senha" required autofocus/>
+        <label for="password">Senha
+          <input type="password" id="password" placeholder="sua senha" />
         </label>
         <div class="lembrarsenha">
-            <label for="lembrar">
-              Lembrar de mim <input type="checkbox" id="lembrar" />
-            </label>
-            <a href="#">Esqueci minha senha</a>
+          <label for="lembrar">
+            <input type="checkbox" id="lembrar" /> Lembrar de mim
+          </label>
+          <a href="#">Esqueci minha senha</a>
         </div>
-        <button class="mulish" onclick="login()">Entrar</button>
-        <p>Não tem conta ainda <span class="criar">Crie agora</span></p>
-      </div>
+        <input class="submit" type="submit" onclick="login()" value="Entrar">
+        <span id="outErrorMessage"></span>
+        <p>Não tem conta ainda? <a href="#"><b>Crie agora</b></a></p>
+      </form>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
