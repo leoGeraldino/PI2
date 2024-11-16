@@ -20,7 +20,7 @@ form.addEventListener("submit", (e) => {
 
   if (email !== "" && password !== "") {
     if (email === user.email && password === user.password) {
-      window.location.href = "./index.html";
+      window.location.href = "./telainicial.html";
     } else {
       outErrorMessage.innerText = "Email ou senha incorretos!";
       clearTimeout();
